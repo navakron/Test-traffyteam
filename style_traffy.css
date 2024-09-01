@@ -1,0 +1,282 @@
+/* รีเซ็ตบางสไตล์พื้นฐาน */
+body, h2, p, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* สไตล์พื้นฐานสำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* เปลี่ยนเป็นสีพื้นหลังที่นุ่มนวล */
+    margin: 0;
+    padding-top: 60px; /* เพิ่มพื้นที่ด้านบนเพื่อป้องกันเนื้อหาทับกับ header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* สไตล์สำหรับ header */
+header {
+    background: #fff;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ทำให้ header คงที่ */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000; /* ทำให้ header อยู่บนสุดขององค์ประกอบอื่น ๆ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อยเพื่อแยก */
+    background: #fff; /* ทำให้พื้นหลังของ header ขาว */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 31px;
+    margin-right: 0px; /* เพิ่มพื้นที่ระหว่างโลโก้ */
+}
+
+.additional-logo {
+    height: 40px; /* ปรับขนาดตามต้องการ */
+}
+
+.report-buttons {
+    margin-left: auto; /* ผลักปุ่มไปทางขวา */
+}
+
+/* สไตล์สำหรับ report-button */
+.report-button {
+    padding: 8px 12px; /* ลดขนาด padding */
+    margin-left: 5px;
+    background-color: transparent; /* ทำให้พื้นหลังโปร่งใส */
+    border: 1px solid #bdbdbd; /* กำหนดกรอบเป็นสีดำและบาง */
+    color: #000; /* กำหนดสีตัวหนังสือเป็นสีดำ */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
+}
+
+.report-button img {
+    width: 14px; /* กำหนดความกว้างของไอคอนให้ใกล้เคียงกับขนาดตัวอักษร */
+    height: auto; /* รักษาอัตราส่วนของภาพ */
+    margin-left: 5px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.report-button:hover {
+    background-color: #000; /* เพิ่มพื้นหลังสีดำเมื่อชี้เมาส์ */
+    color: #fff; /* เปลี่ยนสีตัวหนังสือเป็นสีขาวเมื่อชี้เมาส์ */
+}
+
+/* สไตล์สำหรับ image-container */
+.image-container {
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่างรูปภาพ */
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* สไตล์สำหรับแต่ละภาพใน image-container */
+.image-wrapper {
+    position: relative;
+    width: 288px; /* ขนาดเดียวกับรูปภาพ */
+    height: 288px; /* ขนาดเดียวกับรูปภาพ */
+}
+
+.image-container img {
+    width: 100%; /* ปรับให้พอดีกับ container */
+    height: 100%; /* ปรับให้พอดีกับ container */
+    border-radius: 10px; /* เพิ่มมุมโค้งให้กับรูปภาพ */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #fff; /* สีตัวหนังสือ */
+    background: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งใส */
+    border-radius: 10px 10px 0 0; /* มุมโค้งของกรอบ */
+    box-sizing: border-box;
+}
+
+/* สไตล์สำหรับ status-section */
+.status-section {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 875px; /* เพิ่มความกว้างสูงสุด */
+    /* margin: 20px 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* ระยะห่างระหว่างบล็อก */
+}
+
+.status-card {
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.date {
+    margin: 0;
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    border: 0;
+    margin: 10px 0;
+}
+
+/* สไตล์สำหรับ footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3e3e3e;
+    color: #fff;
+    width: 100%;
+    margin-top: auto; /* ให้ footer อยู่ที่ส่วนท้ายของเนื้อหา */
+}
+
+/* สไตล์สำหรับกล่องข้อมูล */
+.info-box {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.info-box button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.info-box button:hover {
+    color: #0056b3;
+}
+
+.info-box button:hover {
+    color: #0056b3;
+}
+
+/* ทดลอง */
+.date-time-report {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 184, 0);
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: "Noto Sans Thai";
+    height: 65px;
+    padding: 0 16px;
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างบล็อก */
+    color: white; /* ตัวหนังสือเป็นสีขาว */
+  }
+  
+  .title-report {
+    margin: 0;
+    padding-right: 16px; /* เพิ่มระยะห่างทางขวาให้มากขึ้น */
+  }
+  
+  .container-main-timestamp {
+    display: flex;
+    align-items: center;
+  }
+  
+  .txt-date {
+    margin-right: 8px; /* เพิ่มระยะห่างระหว่างวันที่และเวลา */
+  }
+  
+  .container-timestamp {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+  .container-bottom-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures items are spaced evenly */
+    background-color: rgb(250, 233, 178);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-sizing: border-box;
+    column-gap: 8px;
+    flex-wrap: wrap;
+    font-family: "Noto Sans Thai";
+    height: 60px;
+    margin: 0;
+    padding: 16px;
+    position: relative;
+    row-gap: 8px;
+    max-width: 1000px; /* เพิ่มความกว้างสูงสุด */
+    padding-left: 120;
+    padding-right: 120;
+  }
+
+  .container-bottom-data img {
+    width: auto; /* Adjust to auto so it scales with its container */
+    height: 50%; /* Adjust to fill the height of the container */
+    max-height: 100%; /* Ensure it doesn’t exceed container height */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  .img {
+    display: block; /* ทำให้รูปภาพเป็นบล็อกเพื่อให้ง่ายต่อการจัดตำแหน่ง */
+    max-width: 30%; /* ป้องกันไม่ให้รูปภาพใหญ่เกินขนาดของคอนเทนเนอร์ */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+    margin: 0 auto; /* จัดตำแหน่งรูปภาพให้อยู่กลาง */
+    border-radius: 10px; /* เพิ่มขอบมนให้กับรูปภาพ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับรูปภาพ */
+    transition: transform 0.3s ease-in-out; /* เพิ่มเอฟเฟกต์การเปลี่ยนแปลง */
+  }
+  
+  .img:hover {
+    transform: scale(1.05); /* ขยายขนาดรูปภาพเมื่อเลื่อนเมาส์ */
+  }
+  
+  
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+

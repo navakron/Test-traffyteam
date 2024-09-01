@@ -1,0 +1,179 @@
+/* รีเซ็ตบางสไตล์พื้นฐาน */
+body, h2, p, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* สไตล์พื้นฐานสำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    margin: 0;
+    padding-top: 60px; /* เพิ่มพื้นที่ด้านบนเพื่อป้องกันเนื้อหาทับกับหัว */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* สไตล์สำหรับ header */
+header {
+    background: #fff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* ทำให้ header คงที่ */
+    top: 0; /* วางที่ด้านบน */
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000; /* ทำให้ header อยู่บนสุดขององค์ประกอบอื่น ๆ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อยเพื่อแยก */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px; /* เพิ่มพื้นที่ระหว่างโลโก้ */
+}
+
+.additional-logo {
+    height: 40px; /* ปรับขนาดตามต้องการ */
+}
+
+.report-buttons {
+    margin-left: auto; /* ผลักปุ่มไปทางขวา */
+}
+
+.report-button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    background-color: transparent; /* ทำให้พื้นหลังโปร่งใส */
+    border: 2px solid #bdbdbd; /* กำหนดกรอบเป็นสีดำ */
+    color: #000; /* กำหนดสีตัวหนังสือเป็นสีดำ */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.report-button:hover {
+    background-color: #cacaca; /* เพิ่มพื้นหลังเล็กน้อยเมื่อชี้เมาส์ */
+    color: #000; /* รักษาสีตัวหนังสือเป็นสีดำเมื่อชี้เมาส์ */
+}
+
+/* สไตล์สำหรับ main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* ปรับความสูงเพื่อให้พอดีกับ header/footer คงที่ */
+    padding: 20px;
+}
+
+.form-container {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px; /* เพิ่มความกว้างสูงสุดของฟอร์ม */
+    width: 100%; /* ความกว้างเต็มพื้นที่ของคอนเทนเนอร์ */
+    box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้าง */
+    margin: 0 40px; /* เพิ่มระยะห่างด้านซ้ายและขวาของฟอร์ม */
+    display: flex;
+    flex-direction: column;
+}
+
+/* สไตล์สำหรับหัวข้อ */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* สไตล์สำหรับฟอร์ม */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ระยะห่างระหว่างฟิลด์ */
+}
+
+/* สไตล์สำหรับ label และ input */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%; /* ความกว้างเต็มที่พร้อมการปรับ padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* สไตล์สำหรับปุ่ม */
+button {
+    padding: 10px 20px;
+    background-color: #3e3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; /* จัดปุ่มให้กึ่งกลางในแนวนอน */
+}
+
+/* สไตล์สำหรับปุ่มเมื่อชี้เมาส์ */
+button:hover {
+    background-color: #333;
+}
+
+/* สไตล์สำหรับ footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3e3e3e;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 31px;
+    margin-right: 0px; /* เพิ่มพื้นที่ระหว่างโลโก้ */
+}
+
+.additional-logo {
+    height: 40px; /* ปรับขนาดตามต้องการ */
+}
+
+.report-buttons {
+    margin-left: auto; /* ผลักปุ่มไปทางขวา */
+}
+
+.report-button img {
+    width: 14px; /* กำหนดความกว้างของไอคอนให้ใกล้เคียงกับขนาดตัวอักษร */
+    height: auto; /* รักษาอัตราส่วนของภาพ */
+    margin-left: 5px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.report-button:hover {
+    background-color: #000; /* เพิ่มพื้นหลังสีดำเมื่อชี้เมาส์ */
+    color: #fff; /* เปลี่ยนสีตัวหนังสือเป็นสีขาวเมื่อชี้เมาส์ */
+}
+
+
